@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            border: 2px solid;
+            width: 50%;
+            height: 200px;
+            background-color: rgb(179, 69, 28);
+        }
+
+        button {
+            background-color: orangered;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .container img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 40%;
+            top: 10px;
+        }
+
+        .rotate:hover~img {
+            transform: rotate(4000000000000000deg);
+            transition: all 4s;
+
+        }
+
+        .Translate:hover~img {
+            transform: translateX(200px);
+            transition: all ease-in 2s;
+        }
+
+        .scale:hover~img {
+            transform: scale(2);
+            transition: all ease-out 2s;
+        }
+
+        .skew:hover~img {
+            transform: skew(40deg);
+            transition: all steps(4, start) 2s;
+        }
+
+        button:hover {
+            box-shadow: 2px 2px 20px black, -2px 2px 20px white;
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="Translate">Translate</button>
+        <button class="rotate">Rotate</button>
+        <button class="scale">Scale</button>
+        <button class="skew">Skew</button>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.dBWBq_B2duFnqxhQ_x4UGgHaHa&pid=Api&P=0&h=180" alt="" width="100px">
+    </div>
+</body>
+
+</html>
